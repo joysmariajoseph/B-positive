@@ -83,11 +83,6 @@ public class docservelet extends HttpServlet {
             String dpass= request.getParameter("password");
             String dcpass= request.getParameter("cpassword");
             
-//            if(fname.length()==0)
-//            {
-//                alert("please");
-//            }
-
             Class.forName("com.mysql.jdbc.Driver");
             con=DriverManager.getConnection("jdbc:mysql://localhost:3306/blood", "root", "admin");
             st=con.createStatement();
@@ -104,11 +99,7 @@ public class docservelet extends HttpServlet {
             e.printStackTrace();
         }
     }
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+   
     @Override
     public String getServletInfo() {
         return "Short description";
